@@ -45,7 +45,7 @@ body {
 }
 
 .navbar a {
-  font-size: 20px;
+  font-size: 18px;
   color: #ededed;
   text-decoration: none;
   font-weight: 500;
@@ -262,8 +262,8 @@ button:hover {
 .home-sci a {
   position: relative;
   display: inline-flex;
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   background-color: transparent;
@@ -279,6 +279,7 @@ button:hover {
 
 .home-sci a:hover {
   color: #081b29;
+  background-color: #00abf0;
 }
 
 .home-sci a::before {
