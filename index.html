@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calton Gigueira | Portfolio 2</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="shortcut icon"
+      href="images/1-removebg-preview.png"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="" class="logo">Calton.</a>
+
+      <nav class="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <button>&#9776;</button>
+    </header>
+
+    <section class="home">
+      <div class="home-content">
+        <h1>Hi, I'm Calton Gigueira</h1>
+        <h3>Front-end Developer</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+          deleniti harum dolore, odit consectetur inventore beatae! Officia
+          similique quam cum sint possimus necessitatibus dolore quo, eos illum
+          nam doloremque libero.
+        </p>
+        <div class="btn-box">
+          <a href="#">Hire me</a>
+          <a href="#">Let's Talk</a>
+        </div>
+      </div>
+
+      <div class="home-sci">
+        <a href="#"><img src="images/facebook.png" alt="" /></a>
+        <a href="#"
+          ><img src="images/logotipo-do-twitter-em-fundo-preto.png" alt=""
+        /></a>
+        <a href="#"><img src="images/linkedin.png" alt="" /></a>
+      </div>
+
+      <span class="home-imgHover"></span>
+    </section>
+    <script>
+      const btn = document.querySelector("button");
+      const nav = document.querySelector(".navbar");
+
+      btn.addEventListener("click", () => {
+        if (nav.style.display === "none") {
+          nav.style.display = "flex";
+        } else {
+          nav.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
