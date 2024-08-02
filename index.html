@@ -10,59 +10,52 @@
       href="images/1-removebg-preview.png"
       type="image/png"
     />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
-      <a href="" class="logo">Calton.</a>
+      <a href="#" class="logo">Calton.</a>
 
-      <nav class="navbar">
-        <a href="#" class="active">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Contact</a>
-      </nav>
-
-      <button>&#9776;</button>
+      <a href="#" class="portfolio">Portfolio</a>
     </header>
 
-    <section class="home">
-      <div class="home-content">
-        <h1>Hi, I'm Calton Gigueira</h1>
-        <h3>Front-end Developer</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-          deleniti harum dolore, odit consectetur inventore beatae! Officia
-          similique quam cum sint possimus necessitatibus dolore quo, eos illum
-          nam doloremque libero.
-        </p>
-        <div class="btn-box">
-          <a href="#">Hire me</a>
-          <a href="#">Let's Talk</a>
+    <main>
+      <section class="home">
+        <div class="home-content">
+          <h1>Hi, I'm Calton Gigueira</h1>
+          <h3>Front-end Developer</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+            deleniti harum dolore, odit consectetur inventore beatae! Officia
+            similique quam cum sint possimus necessitatibus dolore quo, eos
+            illum nam doloremque libero.
+          </p>
+          <div class="btn-box">
+            <a href="#">Hire me</a>
+            <a href="#">Let's Talk</a>
+          </div>
         </div>
-      </div>
-
-      <div class="home-sci">
-        <a href="#"><i class='bx bxl-facebook'></i></a>
-        <a href="#"
-          ><i class='bx bxl-twitter'></i></a>
-        <a href="#"><i class='bx bxl-linkedin'></i></a>
-      </div>
-
-      <span class="home-imgHover"></span>
-    </section>
-    <script>
-      const btn = document.querySelector("button");
-      const nav = document.querySelector(".navbar");
-
-      btn.addEventListener("click", () => {
-        if (nav.style.display === "none") {
-          nav.style.display = "flex";
-        } else {
-          nav.style.display = "none";
-        }
-      });
-    </script>
+        <div class="home-sci">
+          <a href="#"><i class="bx bxl-facebook"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+          <a href="#"><i class="bx bxl-linkedin"></i></a>
+        </div>
+        <span class="home-imgHover"></span>
+      </section>
+      <section class="description">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+          incidunt magnam est ex voluptate iure, vero voluptatem, saepe
+          doloremque ab officia ea tempora ut totam reprehenderit sequi
+          quibusdam corrupti. Molestiae. Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. Reprehenderit nisi vel ut? Ad dicta veniam sit
+          veritatis aut facilis vel aperiam molestiae, officia necessitatibus
+          sequi deleniti dolore, architecto nam repudiandae?
+        </p>
+      </section>
+    </main>
   </body>
 </html>

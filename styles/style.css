@@ -44,56 +44,16 @@ body {
   animation-delay: 0.4s;
 }
 
-.navbar a {
-  font-size: 18px;
-  color: #ededed;
+.portfolio {
+  font-size: 40px;
   text-decoration: none;
-  font-weight: 500;
-  margin-left: 35px;
-  transition: 0.3s;
-}
-
-.navbar a:hover,
-.navbar a.active {
   color: #00abf0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
-button {
-  display: none;
-  position: relative;
-  width: 50px;
-  background-color: #00abf0;
-  border: 2px solid #00abf0;
-  border-radius: 8px;
-  font-size: 19px;
-  color: #081b29;
-  cursor: pointer;
-  transition: 0.5s;
-  z-index: 1;
-  overflow: hidden;
-}
-
-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #081b29;
-  transition: 0.5s;
-  z-index: -1;
-}
-
-button:hover::before {
-  width: 100%;
-}
-
-button:hover {
-  color: #00abf0;
-}
-
-.home {
+.home,
+.description {
   height: 100vh;
   /* background: url('../images/1.png') no-repeat;
   background-size: cover;
@@ -103,7 +63,13 @@ button:hover {
   padding: 0 10%;
 }
 
-.home-content {
+.description {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.home-content,
+.description p {
   max-width: 600px;
 }
 
@@ -323,6 +289,29 @@ button:hover {
   background-color: #081b29;
   opacity: 0.8;
 }
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #081b29;
+}
+
+/* ::-webkit-scrollbar-button {
+  background-color: #248fb9;
+} */
+
+::-webkit-scrollbar-thumb {
+  background-color: #00abf0;
+  border-radius: 10px;
+}
+
+/* 
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+} */
+
 
 @keyframes showRight {
   100% {
