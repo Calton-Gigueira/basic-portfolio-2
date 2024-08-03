@@ -1,13 +1,29 @@
 const works = [
-  { img: 'images/works/ucm-clone.png', alt: 'UCM Clone', link: '' },
+  {
+    img: 'images/works/ucm-clone.png',
+    alt: 'UCM Clone',
+    link: 'https://calton-gigueira.github.io/projeto-ucm/',
+  },
   {
     img: 'images/works/basic-portfolio.png',
     alt: 'Basic Portfolio',
-    link: 'calton-gigueira.github.io/basic-portfolio/',
+    link: 'https://calton-gigueira.github.io/basic-portfolio/',
   },
-  { img: 'images/works/tesla-clone.png', alt: 'Tesla Clone', link: '' },
-  { img: 'images/works/cordel.png', alt: 'Cordel', link: '' },
-  { img: 'images/works/android.png', alt: 'Android', link: '' },
+  {
+    img: 'images/works/tesla-clone.png',
+    alt: 'Tesla Clone',
+    link: 'https://calton-gigueira.github.io/tesla/',
+  },
+  {
+    img: 'images/works/cordel.png',
+    alt: 'Cordel',
+    link: 'https://calton-gigueira.github.io/projeto-cordel/',
+  },
+  {
+    img: 'images/works/android.png',
+    alt: 'Android',
+    link: 'https://calton-gigueira.github.io/projeto-andorid/',
+  },
   {
     img: 'images/works/dark_light_mode.png',
     alt: 'Dark & Light Mode',
