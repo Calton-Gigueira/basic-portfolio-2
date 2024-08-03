@@ -30,6 +30,7 @@ body {
   color: #ededed;
   text-decoration: none;
   font-weight: 600;
+  transition: 0.3s;
 }
 
 .logo::before {
@@ -46,10 +47,29 @@ body {
 
 .portfolio {
   font-size: 40px;
+  font-weight: 700;
   text-decoration: none;
   color: #00abf0;
   text-transform: uppercase;
   letter-spacing: 5px;
+  transition: 0.3s;
+}
+
+.logo:hover,
+.portfolio:hover {
+  transform: translateY(-10px);
+}
+
+.portfolio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #081b29;
+  animation: showRight 1s ease forwards;
+  animation-delay: 3s;
 }
 
 .home,
@@ -73,7 +93,8 @@ body {
   max-width: 600px;
 }
 
-.home-content h1 {
+.home-content h1,
+.works h1 {
   position: relative;
   font-size: 56px;
   font-weight: 700;
@@ -129,6 +150,7 @@ body {
   animation-delay: 1.6s;
 }
 
+/* 
 .home-content .btn-box {
   position: relative;
   display: flex;
@@ -149,7 +171,6 @@ body {
   animation-delay: 1.9s;
   z-index: 2;
 }
-
 .btn-box a {
   position: relative;
   display: inline-flex;
@@ -201,7 +222,7 @@ body {
 
 .btn-box a:hover::before {
   width: 100%;
-}
+} */
 
 .home-sci {
   position: absolute;
@@ -245,6 +266,7 @@ body {
 .home-sci a:hover {
   color: #081b29;
   background-color: #00abf0;
+  transform: translateY(-10px);
 }
 
 .home-sci a::before {
@@ -262,6 +284,47 @@ body {
   width: 100%;
 }
 
+.works {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 10%;
+}
+
+.works h1 {
+  color: #00abf0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  text-align: center;
+}
+
+.work {
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.work:hover {
+  transform: scale(1.1);
+}
+
+.work img {
+  width: 450px;
+  border-radius: 15px;
+}
+
+.work a {
+  text-decoration: none;
+  font-size: 32px;
+  color: #ededed;
+}
+
+/* 
 .home-imgHover {
   position: absolute;
   top: 0;
@@ -288,7 +351,7 @@ body {
 .home-imgHover:hover {
   background-color: #081b29;
   opacity: 0.8;
-}
+} */
 
 ::-webkit-scrollbar {
   width: 15px;
@@ -312,41 +375,126 @@ body {
   cursor: pointer;
 } */
 
-
 @keyframes showRight {
   100% {
     width: 0;
   }
 }
 
-@media screen and (max-width: 850px) {
-  .navbar {
-    display: none;
-    position: absolute;
-    right: 5vh;
-    top: 15vh;
+@media screen and (max-width: 740px) {
+  .logo {
+    font-size: 16px;
+  }
 
-    width: 300px;
-    height: 400px;
-    border-top-right-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+  .portfolio {
+    font-size: 19px;
+  }
 
-    background-color: #0000007f;
-    backdrop-filter: blur(5px);
+  .description {
+    display: flex;
+    justify-content: flex-start;
+    text-align: justify;
+  }
+
+  .home-content p {
+    text-align: justify;
+  }
+
+  .home-content,
+  .description p {
+    width: 70vw;
+  }
+
+  .home-content h1 {
+    font-size: 29px;
+  }
+
+  .home-content h3 {
+    margin-top: 10px;
+    font-size: 25px;
+  }
+
+  .works h1 {
+    font-size: 32px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 510px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .container::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  .work {
+    display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+    gap: 1.5rem;
   }
 
-  .navbar a {
-    margin-left: -10px;
+  .work img {
+    width: 200px;
   }
 
-  button {
-    display: block;
+  .work a {
+    font-size: 16px;
   }
 
-  .home-imgHover {
-    display: none;
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #081b29;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #00abf0;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 741px) and (max-width: 1000px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 625px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 20px;
+  }
+
+  .work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1700px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 630px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 20px;
+  }
+
+  .work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .work img {
+    width: 100%;
   }
 }
