@@ -284,6 +284,35 @@ body {
   width: 100%;
 }
 
+.tooltip-container,
+.tooltip-container-2,
+.tooltip-container-3 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.tooltip-container .tooltip,
+.tooltip-container-2 .tooltip,
+.tooltip-container-3 .tooltip {
+  position: absolute;
+  top: -60px;
+  background-color: #00abf0;
+  color: #081b29;
+  padding: 7px 12px;
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-weight: 700;
+}
+
+.tooltip-container:hover .tooltip,
+.tooltip-container-2:hover .tooltip,
+.tooltip-container-3:hover .tooltip {
+  opacity: 1;
+}
+
 .works {
   height: 100vh;
   display: flex;
