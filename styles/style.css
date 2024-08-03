@@ -422,7 +422,7 @@ body {
   .container {
     display: grid;
     grid-template-columns: 1fr;
-    height: 510px;
+    height: 530px;
     overflow-y: scroll;
     overflow-x: hidden;
   }
@@ -472,7 +472,7 @@ body {
   .container {
     display: grid;
     grid-template-columns: 1fr;
-    height: 625px;
+    height: 645px;
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 20px;
@@ -494,7 +494,7 @@ body {
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 630px;
+    height: 650px;
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 20px;
