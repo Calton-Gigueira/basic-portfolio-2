@@ -6,6 +6,10 @@
     "Lucida Sans", Arial, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #081b29;
   color: #ededed;
@@ -88,6 +92,23 @@ body {
   justify-content: flex-end;
 }
 
+.description section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80vh;
+  position: relative;
+}
+
+.description section div a {
+  position: absolute;
+  right: 0vw;
+}
+
+.description section div:nth-child(3) a:hover {
+  transform: translateY(20px);
+}
+
 .home-content,
 .description p {
   max-width: 600px;
@@ -136,6 +157,29 @@ body {
   position: relative;
   font-size: 16px;
   margin: 20px 0 40px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.description h1 {
+  color: #00abf0;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.description p {
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.home-content p:hover,
+.description p:hover {
+  transform: scale(1.2);
+}
+
+.description span {
+  color: #00abf0;
+  font-size: 1.2rem;
 }
 
 .home-content p::before {
@@ -230,6 +274,7 @@ body {
   width: 170px;
   display: flex;
   justify-content: space-between;
+  width: 79.6vw;
 }
 
 .home-sci::before {
@@ -245,7 +290,19 @@ body {
   z-index: 2;
 }
 
-.home-sci a {
+.social {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.home-sci .first-darr a:hover {
+  transform: translateY(20px);
+}
+
+.home-sci a,
+.description a,
+.works section:nth-child(1) a {
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -263,13 +320,16 @@ body {
   transition: 0.5s;
 }
 
-.home-sci a:hover {
+.home-sci a:hover,
+.description a:hover,
+.works section:nth-child(1) a:hover {
   color: #081b29;
   background-color: #00abf0;
   transform: translateY(-10px);
 }
 
-.home-sci a::before {
+.home-sci a::before,
+.description a::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -320,6 +380,11 @@ body {
   justify-content: center;
   gap: 2rem;
   padding: 10% 10%;
+}
+
+.works section:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
 }
 
 .works h1 {
@@ -384,7 +449,7 @@ body {
 } */
 
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -426,6 +491,10 @@ body {
     text-align: justify;
   }
 
+  .description section div a {
+    right: 0;
+  }
+
   .home-content p {
     text-align: justify;
   }
@@ -445,6 +514,10 @@ body {
   }
 
   .works h1 {
+    font-size: 40px;
+  }
+
+  .description h1 {
     font-size: 32px;
   }
 
@@ -457,7 +530,7 @@ body {
   }
 
   .container::-webkit-scrollbar {
-    width: 15px;
+    width: 10px;
   }
 
   .work {
@@ -476,7 +549,7 @@ body {
   }
 
   ::-webkit-scrollbar {
-    width: 15px;
+    width: 10px;
   }
 
   ::-webkit-scrollbar-track {
@@ -494,7 +567,8 @@ body {
     padding-top: 10%;
   }
 
-  .works h1 {
+  .works h1,
+  .description h1 {
     font-size: 30px;
   }
 

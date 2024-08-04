@@ -1,4 +1,4 @@
-const works = [
+const sites = [
   {
     img: 'images/works/ucm-clone.png',
     alt: 'UCM Clone',
@@ -33,18 +33,18 @@ const works = [
 
 const container = document.querySelector('.container');
 
-works.map((work, i) => {
+sites.map((site, i) => {
   const div = document.createElement('div');
   div.className = 'work';
 
   const img = document.createElement('img');
-  img.src = `${work.img}`;
-  img.title = `${work.alt}`;
-  img.alt = `${work.alt}`;
+  img.src = `${site.img}`;
+  img.title = `${site.alt}`;
+  img.alt = `${site.alt}`;
 
   const a = document.createElement('a');
-  a.href = `${work.link}`;
-  a.textContent = `${i + 1} - ${work.alt}`;
+  a.href = `${site.link}`;
+  a.textContent = `${i + 1} - ${site.alt}`;
   a.target = '_blank';
 
   div.appendChild(img);
