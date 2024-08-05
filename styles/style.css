@@ -314,6 +314,7 @@ body {
 }
 
 .works {
+  position: relative;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -403,6 +404,68 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: #00abf0;
   border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #00abf0;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: 0.5s;
+}
+
+.close-modal:hover {
+  transform: rotate(180deg);
+}
+
+.modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 98.5vw;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+
+  background-color: #081b29;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.desc {
+  margin-top: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+  max-width: 600px;
+}
+
+.desc:hover {
+  transform: scale(1.2);
 }
 
 /* 
@@ -540,7 +603,7 @@ body {
   }
 
   .container {
-    height: 70vh;
+    height: 75vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     overflow-y: scroll;
